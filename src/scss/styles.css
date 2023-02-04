@@ -7,7 +7,7 @@
 }
 
 html {
-  background: whitesmoke;
+  background: rgb(32, 32, 32);
   height: 100%;
 }
 
@@ -28,6 +28,10 @@ html {
   padding: 3vh;
 }
 
+.navbar h1 {
+  color: white;
+}
+
 .score-container {
   display: flex;
   flex-direction: row;
@@ -37,14 +41,14 @@ html {
 }
 
 .score-container div {
-  background: black;
+  background: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 9999px;
   padding: 2vh;
 }
 
 .score-container div p {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .card-grid {
@@ -56,15 +60,45 @@ html {
   gap: 2vw;
 }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .card-grid div {
+  -webkit-animation: fadeIn 300ms ease-in-out;
+          animation: fadeIn 300ms ease-in-out;
   height: 33vh;
-  background: rgb(141, 141, 141);
+  background: rgb(0, 0, 0);
   border-radius: 2vw;
   cursor: pointer;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  transition: all 250ms ease-in-out;
+  transition: all 200ms ease-in-out;
   position: relative !important;
   overflow: hidden;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.card-grid div img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
 }
 
 .card-grid div:hover {
@@ -73,16 +107,17 @@ html {
 
 .gradient-overlay {
   position: absolute !important;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)) !important;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)) !important;
   width: 100%;
   height: 13vh !important;
   border-radius: 0px !important;
   top: 20vh;
-  z-index: 99;
+  z-index: 1;
   box-shadow: none !important;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  padding: 2vh;
 }
 
 .gradient-overlay p {
@@ -98,7 +133,7 @@ html {
 
 .links a {
   text-decoration: none;
-  color: rgb(174, 174, 174);
+  color: rgb(76, 76, 76);
   transition: all 250ms ease-in-out;
 }
 
@@ -107,5 +142,5 @@ html {
 }
 
 .links a:nth-of-type(2):hover {
-  color: #171515;
+  color: #ffffff;
 }/*# sourceMappingURL=styles.css.map */

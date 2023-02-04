@@ -1,12 +1,12 @@
 import React from "react";
 
-export function Navbar() {
+export function Navbar({ score, bestScore }) {
   return (
     <div className="navbar">
-      <h1>Memory Cards</h1>
+      <h1>Memory Cards Game</h1>
       <div className="score-container">
-        <div><p>Best Score: 0</p></div>
-        <div><p>Current Score: 0</p></div>
+        <div><p>Current Score: {score}</p></div>
+        <div><p>Best Score: {bestScore}</p></div>
       </div>
     </div>
   );
